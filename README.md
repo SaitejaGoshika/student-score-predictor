@@ -22,3 +22,11 @@ A Machine Learning web app that predicts student scores based on study hours.
 ```bash
 pip install -r requirements.txt
 python app.py
+
+Deployed on : https://student-score-app-az70.onrender.com
+
+--
+Author :
+
+**Sai Teja Goshika**
+--
