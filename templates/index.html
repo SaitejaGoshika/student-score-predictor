@@ -71,19 +71,19 @@
 </head>
 
 <body>
-
+<p>Predict your score based on study hours using Machine Learning</p>
 <div class="container">
     <h1>🎓 Score Predictor</h1>
 
     <form action="/predict" method="post">
-        <input type="number" step="0.1" name="hours" placeholder="Enter study hours" required>
+        <input type="number" min="0" step="0.1" name="hours" placeholder="Enter study hours" required>
         <br>
         <button type="submit">Predict</button>
     </form>
 
     {% if prediction_text %}
         <div class="result">
-            {{ prediction_text }}
+           <h2>📊 {{ prediction_text }}</h2>
         </div>
     {% endif %}
 
@@ -94,7 +94,10 @@
         <p>3. Predicts score using trained ML model</p>
         <p>4. Displays estimated result</p>
     </div>
+    
 </div>
-
+<p style="margin-top:20px; font-size:12px;">
+Built with ❤️ using Flask & Machine Learning
+</p>
 </body>
 </html>
