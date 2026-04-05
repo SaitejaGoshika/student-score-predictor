@@ -1,32 +1,45 @@
-# 🎓 Student Score Predictor
+🎓 Student Score Predictor
+A simple yet powerful Machine Learning web app that predicts student scores based on study hours.
 
-A Machine Learning web app that predicts student scores based on study hours.
+🚀 Tech Stack
+Python (backend logic)
 
-## 🚀 Tech Stack
-- Python
-- Scikit-learn
-- Flask
-- HTML & CSS
+Scikit-learn (ML model)
 
-## 📊 Features
-- Real-time prediction
-- Clean UI
-- ML model integration
+Flask (web framework)
 
-## 🌐 How it Works
-1. Enter study hours
-2. Model predicts score
-3. Displays result instantly
+HTML & CSS (frontend UI)
 
-## 📦 Run Locally
-```bash
+📊 Features
+Real-time score prediction
+
+Interactive and clean user interface
+
+Seamless ML model integration
+
+Lightweight and easy to deploy
+
+🌐 How It Works
+Enter the number of study hours
+
+The ML model predicts the expected score
+
+Results are displayed instantly on the web app
+
+📦 Run Locally
+bash
+# Clone the repository
+git clone <your-repo-link>
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run the application
 python app.py
+The app will be available at http://127.0.0.1:5000/ (127.0.0.1 in Bing) by default.
 
-Deployed on : https://student-score-app-az70.onrender.com
+🚀 Deployment
+Deployed live at: [Student Score Predictor](https://student-score-app-az70.onrender.com)
 
---
-Author :
-
-**Sai Teja Goshika**
---
+👨‍💻 Author
+Sai Teja Goshika
