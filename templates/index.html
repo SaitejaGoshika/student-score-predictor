@@ -6,9 +6,8 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1f3c88, #1c2b4a);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -17,55 +16,72 @@
         }
 
         .container {
-            background: rgba(0, 0, 0, 0.7);
+            background: #0b1a2f;
             padding: 40px;
-            border-radius: 15px;
+            border-radius: 20px;
+            width: 420px;
             text-align: center;
-            width: 400px;
-            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.6);
         }
 
         h1 {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 25px;
         }
 
         input {
-            width: 80%;
-            padding: 12px;
-            border-radius: 8px;
+            width: 85%;
+            padding: 14px;
+            border-radius: 10px;
             border: none;
-            margin: 15px 0;
             font-size: 16px;
+            margin-bottom: 20px;
+            outline: none;
         }
 
         button {
-            padding: 12px 25px;
+            padding: 12px 30px;
+            border-radius: 10px;
             border: none;
-            border-radius: 8px;
-            background-color: #00c6ff;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
             color: white;
             font-size: 16px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
-            background-color: #0072ff;
+            transform: scale(1.05);
         }
 
         .result {
-            margin-top: 15px;
-            font-size: 20px;
-            color: #00ffcc;
+            margin-top: 25px;
+            font-size: 22px;
+            color: #00ffd5;
+            font-weight: bold;
         }
 
         .info {
-            margin-top: 25px;
+            margin-top: 30px;
             text-align: left;
             font-size: 14px;
+            color: #ccc;
         }
 
         .info h3 {
             text-align: center;
+            color: white;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #aaa;
         }
     </style>
 </head>
@@ -73,8 +89,11 @@
 <body>
 
 <div class="container">
-    <p>Predict your score based on study hours using Machine Learning</p>
+
     <h1>🎓 Score Predictor</h1>
+    <div class="subtitle">
+        Predict your score based on study hours using Machine Learning
+    </div>
 
     <form action="/predict" method="post">
         <input type="number" min="0" step="0.1" name="hours" placeholder="Enter study hours" required>
@@ -84,7 +103,7 @@
 
     {% if prediction_text %}
         <div class="result">
-           <h2>📊 {{ prediction_text }}</h2>
+            📊 {{ prediction_text }}
         </div>
     {% endif %}
 
@@ -95,10 +114,12 @@
         <p>3. Predicts score using trained ML model</p>
         <p>4. Displays estimated result</p>
     </div>
-    
+
+    <div class="footer">
+        Built with ❤️ using Flask & Machine Learning
+    </div>
+
 </div>
-<p style="margin-top:20px; font-size:12px;">
-Built with ❤️ using Flask & Machine Learning
-</p>
+
 </body>
 </html>
